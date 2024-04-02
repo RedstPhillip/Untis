@@ -1,0 +1,53 @@
+TODO: new_school_year second year
+ADMINISTRATOR
+-View classes/students/teacher (with rating)
+-View stats
+    -Grades from all students
+    -Drop-Out / finished
+-Add/Delete Student/Teacher
+    -Add Teacher (Name, school-subject)
+    -Delete Teacher
+    -Add Student (info von Schüler, Eltern -> anmeldedaten für Schüler + Eltern)
+    -Delete Student (reason -> remark in stats)
+-Announcements
+-view Suggestion Box
+-go to new year
+    #-print certivicates, send to parent
+    -delete time tables, grades
+    -set student rank up
+        -if finished year 5, delete account -> remark in stats
+    -create new classes/assign teachers to classes TODO:classes like Class_{name} z.B. Class_1b und keine namen sonder ids als inputs
+    -create new chat rooms
+    #-(create time tables)
+    -holidays, same?
+
+
+
+TEACHER(Name, school-subject)
+-View Classes/Students/TimeTable/Stats of class or student
+-Announcement for class
+-chat with student
+-create Test
+-new absence for student -> message to student + parent
+-suggest something
+
+
+STUDENT(Name, school-year, parent)
+-View grades/stats
+-Chat with Lehrer
+-rate Teacher
+-goal setting
+-warn if under 50%(Frühwarnung gedruckt, sent to parent)
+-suggest something
+
+
+PARENT:(Name, child)
+-view parent_dashboard
+-Excusing absences
+-suggest something
+-get Frühwarnung of child
+
+
+
+
+
