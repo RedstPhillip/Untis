@@ -33,7 +33,6 @@ def create_classes():
             result_list = [item[0] for item in teachers]
             #print(f"Teachers:{result_list}")
             #print(f"Classstudents: {school_class}")
-            #TODO only execute create_school_class if there are students/teachers
             create_school_class(name, result_list, school_class)
 
 
@@ -93,7 +92,6 @@ def delete_students_with_school_year_over_5():
 
     # Commit the transaction
     con.commit()
-    print("Deletion of > 5 successful.")
 
 
 def del_student_imm(student_name):

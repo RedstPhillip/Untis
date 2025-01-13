@@ -30,7 +30,7 @@ def create_school_class(class_name: str, teachers: list, students: list):  # lis
     for teacher_id in teachers:
         c.execute('''INSERT INTO class_enrollment (class_id, teacher_id) VALUES (?, ?)''', (class_id, teacher_id))
 
-    create_table_sql = f"CREATE TABLE IF NOT EXISTS {class_name} (events TEXT, {', '.join(['s' + str(student_id) + ' INTEGER' for student_id in students])})"
+    create_table_sql = f"CREATE TABLE IF NOT EXISTS {class_name} (id INTEGER PRIMARY KEY,events TEXT, {', '.join(['s' + str(student_id) + ' INTEGER' for student_id in students])})"
     c.execute(create_table_sql)
     con.commit()
 
