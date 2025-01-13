@@ -1,3 +1,4 @@
-/notes.txt
-/data.db
 /.venv/
+.idea/
+notes.txt
+data.db
