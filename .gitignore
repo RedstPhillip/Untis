@@ -2,3 +2,4 @@
 .idea/
 notes.txt
 data.db
+grade_prediction/training_data.csv

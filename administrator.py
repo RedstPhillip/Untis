@@ -89,6 +89,7 @@ def new_school_year():
     # delete everything:
     c.execute("DROP TABLE IF EXISTS class_enrollment")
     c.execute("DROP TABLE IF EXISTS classes")
+    c.execute("UPDATE teachers SET amount_classes = 0")
     c.execute("SELECT name FROM sqlite_master WHERE type='table' AND name LIKE 'Class%'")
     tables = c.fetchall()
     for table in tables:
