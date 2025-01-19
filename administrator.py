@@ -78,7 +78,8 @@ def delete_student():
 
 def announcements():  # to everyone, teachers, teacher, class, students, student, parents
     message = input("Enter message: ")
-    c.execute(f"INSERT INTO announcments VALUES (?)", (message))
+    c.execute(f"INSERT INTO announcments VALUES (?)", (message,))
+    con.commit()
 
 
 def view_suggestions():  # from teacher, student, class to administrator, suggestions for improvement
@@ -110,4 +111,4 @@ def new_school_year():
 
 
 if __name__ == "__main__":
-    new_school_year()
+    announcements()

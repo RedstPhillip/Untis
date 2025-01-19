@@ -1,4 +1,3 @@
-import rich
 import sqlite3
 con = sqlite3.connect('data.db')
 c = con.cursor()
@@ -12,16 +11,19 @@ def view_grades_stats():  # precise visualization of stats
     pass
 
 
-def receive_message():
+def receive_message(student_id):
     option = input("What would you like to open. Class chat (class) or school chat (school): ")
     if option == "class":
+        c.execute("SELECT class_name FROM classes WHERE id = (SELECT class_id FROM class_enrollment WHERE student_id = ?)", (student_id,))
+        school_class = c.fetchone()[0]
         c.execute(f"SELECT * FROM chat_{school_class} LIMIT 50")
         history = c.fetchall()
         formatted_data = format_output(history)
         print_formatted_output(formatted_data)
     elif option == "school":
         c.execute(f"SELECT * FROM announcments LIMIT 50")
-        pass
+
+
 
 
 def rate_teacher(student_id):

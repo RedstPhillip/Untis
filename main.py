@@ -63,7 +63,7 @@ def student_menu(id):
 
     match option:
         case "1" | "notifications":
-            pass
+            student.receive_message(id)
         case "2" | "grades":
             pass
         case "3" | "absences":
